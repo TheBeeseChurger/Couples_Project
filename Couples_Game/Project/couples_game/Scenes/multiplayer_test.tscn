@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7mi3abr05m7b"]
+
+[ext_resource type="Script" path="res://Scripts/server_node.gd" id="1_d1gj7"]
+[ext_resource type="Texture2D" uid="uid://7p6mq5nkqd1r" path="res://BarBG.png" id="2_berqk"]
+[ext_resource type="Texture2D" uid="uid://cnl3s5lyfecw" path="res://BarFG.png" id="3_mpvpe"]
+[ext_resource type="Texture2D" uid="uid://bfb6trlilf5o4" path="res://BarMG.png" id="4_fqeq1"]
+
+[node name="ServerNode" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_d1gj7")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="."]
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="."]
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(640, 340)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.262104, 0.512627, 0.532573, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 366.0
+offset_bottom = 26.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+value = 50.0
+stretch_margin_left = 20
+stretch_margin_right = 39
+texture_under = ExtResource("2_berqk")
+texture_over = ExtResource("3_mpvpe")
+texture_progress = ExtResource("4_fqeq1")
